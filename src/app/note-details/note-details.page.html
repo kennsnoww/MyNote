@@ -1,0 +1,48 @@
+<!-- note-details.page.html -->
+
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Détails de la note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      {{ noteDetails?.firstName }} {{ noteDetails?.lastName }}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Semestre {{ noteDetails?.semester }}</p>
+      <p>Identifiant de l'étudiant: {{ noteDetails?.studentId }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Section pour afficher la liste des matières -->
+  <ion-card>
+    <ion-card-header>
+      Liste des matières
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let subject of noteDetails?.subjects; let i = index">
+          <ion-label>{{ subject.name }} - Score: {{ subject.score }} - Coefficient: {{ subject.coefficient }}</ion-label>
+          <ion-icon name="trash" (click)="deleteSubject(i)"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="type" color="tertiary" expand="block" (click)="editNote()">Modifier la note</ion-button>
+   <ion-button class="type" color="tertiary"  expand="block" (click)="deleteNote()">Supprimer la note</ion-button>
+   <ion-button  class="type" color="tertiary" expand="block" (click)="addSubject()">Ajouter une matière</ion-button>
+
+</ion-content>
+
+
+
+
+
+

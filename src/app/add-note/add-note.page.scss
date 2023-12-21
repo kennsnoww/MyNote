@@ -1,0 +1,28 @@
+ion-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+
+  ion-button {
+    margin-top: auto;
+    border-radius: 50px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 90px;
+  }
+}
+
+.subject-card {
+  border: 1px solid #ddd; /* Bordure grise */
+  border-radius: 8px; /* Coins arrondis */
+  margin-bottom: 10px; /* Marge en bas pour séparer les cartes */
+  padding: 10px; /* Marge interne pour le contenu */
+}
+
+.delete-icon {
+  color: #ff4d4d; /* Couleur rouge pour l'icône de suppression */
+  font-size: 20px; /* Taille de la police de l'icône */
+  cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+}
+

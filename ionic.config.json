@@ -1,0 +1,7 @@
+{
+  "name": "MyNote-Project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

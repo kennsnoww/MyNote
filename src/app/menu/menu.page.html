@@ -1,0 +1,19 @@
+<!-- src/app/menu/menu.component.html -->
+
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="showVersion()">
+        Version
+      </ion-item>
+      <ion-item (click)="showAbout()">
+        À propos
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

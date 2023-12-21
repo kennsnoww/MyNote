@@ -1,0 +1,55 @@
+ <ion-content class="ion-padding home-page"  >  
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/about">À propos</ion-item>
+        <ion-item routerLink="/version">Version</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title >
+      Accueil
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding" >
+    
+    <ion-card class="animated-card" color=#a2b3d4>
+      <ion-card-content>
+        <h2>MyNote!</h2>
+        <p>
+          Utilisez cette application pour gérer les notes d'examen obtenues par les étudiants.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button routerLink="/list-notes" expand="block" class="home-button" color="tertiary">
+      Voir les notes
+    </ion-button>
+  
+    <ion-button routerLink="/add-note" expand="block" class="home-button" color="tertiary">
+      Ajouter une note
+    </ion-button>
+  
+    <ion-button routerLink="/average" expand="block" class="home-button" color="tertiary">
+      Calculer la moyenne
+    </ion-button>
+    <img src="assets/images/Logo_MyNote1.jpg" alt="Le logo de APP">
+  </ion-content>
+  
+</ion-content>
+
+
+
+

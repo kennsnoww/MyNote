@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Modifier la note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="noteDetails">
+    <ion-list *ngFor="let subject of noteDetails.subjects; let i = index">
+      <ion-item>
+        <ion-label position="stacked">Nom de la matière</ion-label>
+        <ion-input type="text" [(ngModel)]="subject.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Score</ion-label>
+        <ion-input type="number" [(ngModel)]="subject.score"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Coefficient</ion-label>
+        <ion-input type="number" [(ngModel)]="subject.coefficient"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label position="stacked">Prénom</ion-label>
+      <ion-input type="text" [(ngModel)]="noteDetails.firstName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="noteDetails.lastName"></ion-input>
+    </ion-item>
+    <ion-button  color="tertiary" (click)="updateNote()">Enregistrer les modifications</ion-button>
+
+  </div>
+  <div *ngIf="modificationReussie" class="modification-success-message">
+    {{ modificationReussieMessage }}
+  </div>
+
+
+</ion-content>

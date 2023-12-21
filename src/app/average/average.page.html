@@ -1,0 +1,28 @@
+<!-- src/app/pages/average/average.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Moyennes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+  <ion-card>
+    <ion-card-content>
+      <h2>Moyenne générale</h2>
+      <p>{{ generalAverage | number: '1.2-2' }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let semester of semesters">
+    <ion-card-header>
+      <ion-card-title>Moyenne {{ semester }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ getAverageBySemester(semester) | number: '1.2-2' }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

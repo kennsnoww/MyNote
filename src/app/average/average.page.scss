@@ -1,0 +1,14 @@
+.home-content {
+    background-image: url('/assets/images/back.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+  
+    ion-content {
+      background: none;
+    }
+  }
+
+  .home-content {
+    --ion-background-color: linear-gradient(to bottom, var  #ffffff,(--ion-color-tertiary))
+  }

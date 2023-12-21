@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Liste des notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding home-page" style="--ion-background-color: linear-gradient(to bottom, var  #ffffff,(--ion-color-tertiary))">
+  <ion-list >
+    <ion-item *ngFor="let note of notes; let i = index">
+      <ion-card>
+        <!--  -->
+        <ion-card-content class="custom-card-content">
+          <ion-label class="monbouton3">
+            {{ note.firstName }} {{ note.lastName }}
+          </ion-label>
+          <ion-button class="monbouton2" (click)="viewNoteDetails(note)">Voir les détails</ion-button>
+        </ion-card-content>
+        <!--  -->
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-button class="monbouton1" routerLink="/add-note" expand="block" color="tertiary">
+    Ajouter une note
+  </ion-button>
+</ion-content>
+

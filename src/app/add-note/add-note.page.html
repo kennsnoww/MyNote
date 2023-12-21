@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter une note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <ion-card *ngFor="let subject of subjects; let i = index" class="subject-card">
+    <ion-item>
+      <ion-label position="floating">Nom de la matière</ion-label>
+      <ion-input type="text" [(ngModel)]="subject.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Score</ion-label>
+      <ion-input type="number" [(ngModel)]="subject.score"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Coefficient</ion-label>
+      <ion-input type="number" [(ngModel)]="subject.coefficient"></ion-input>
+    </ion-item>
+
+    <!-- Bouton pour supprimer la matière -->
+    <ion-icon name="close-circle" (click)="removeSubject(i)" class="delete-icon"></ion-icon>
+  </ion-card>
+
+  
+  <ion-item>
+    <ion-label position="floating">Semestre</ion-label>
+    <ion-input type="text" [(ngModel)]="semester"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Prénom de l'étudiant</ion-label>
+    <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nom de l'étudiant</ion-label>
+    <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Identifiant de l'étudiant</ion-label>
+    <ion-input type="text" [(ngModel)]="studentId"></ion-input>
+  </ion-item>
+
+
+  <!-- Bouton pour ajouter une nouvelle matière -->
+  <ion-button color="success" expand="block" (click)="addSubject()">Ajouter une matière</ion-button>
+  <ion-button color="tertiary" expand="block" (click)="addNote()">Ajouter la note </ion-button>
+</ion-content>
+
+
+
+
+
+
+
