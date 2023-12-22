@@ -14,4 +14,4 @@ npm install
 
 npx nx run example-app-angular:serve (where example-app-angular is the name you replaced with above)
 
-You should now load your example app!
+You should now load your app!
