@@ -1,5 +1,6 @@
 // splash.page.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -7,14 +8,13 @@ import { NavController } from '@ionic/angular';
   templateUrl: 'splash.page.html',
   styleUrls: ['splash.page.scss'],
 })
-export class SplashPage {
+export class SplashPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private navCtrl: NavController) {}
-
-  ionViewDidEnter() {
+  ngOnInit() {
+    // Naviguer vers 'home' après 3 secondes
     setTimeout(() => {
-      // Naviguer vers la page Home après 3 secondes
-      this.navCtrl.navigateForward('/home');
-    }, 3000);
+      this.router.navigate(['home']);
+    }, 3400);
   }
 }

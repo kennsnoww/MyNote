@@ -5,7 +5,23 @@ import { HomePage } from './home/home.page';
 
 const routes: Routes = [
 
-  
+
+  { path: '', component: SplashPage },
+  { path: 'home', component: HomePage },
+
+  // {
+  //   path: '',
+  //   redirectTo: 'splash',
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'splash',
+  //   loadChildren: () =>
+  //     import('./splash/splash.module').then(
+  //       (m) => m.SplashPageModule
+  //     ),
+  // },
+
 
   {
     path: '',
@@ -34,7 +50,7 @@ const routes: Routes = [
       ),
   },
 
-
+ 
   {
     path: 'add-subjects/:id',
     loadChildren: () => import('./add-subjects/add-subjects.module').then(m => m.AddSubjectsPageModule)
@@ -104,12 +120,14 @@ const routes: Routes = [
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
   },
-
+  
+  
   {
     path: '',
     redirectTo: 'splash', // Redirige vers la page de splash par défaut
     pathMatch: 'full',
   },
+
   {
     path: 'splash',
     component: SplashPage,
