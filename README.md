@@ -15,3 +15,27 @@ npm install
 npx nx run example-app-angular:serve (where example-app-angular is the name you replaced with above)
 
 You should now load your app!
+
+
+Cette application a un taux de réalisation de 85% ---
+
+
+Projet
+Réaliser une application mobile Android permettant de gérer les notes d’examen
+obtenues par un étudiant.
+L’application devra permettre de réaliser les actions suivantes:
+Ajouter une nouvelle note d’examen ok
+Lister toutes les notes ok
+Supprimer une note ok
+Modifier une note ok
+Afficher la moyenne générale et par semestre K.O
+Une note possède les attributs suivants:
+score: représentant le nombre de points obtenus à l'examen
+course: le nom du cours
+semester: le semestre auquel appartient la note
+● Livrables:
+○ Code source ok
+○ Fichier APK ok
+● Bonus:
+○ Icône de lancement personnalisée K.O
+○ Splash screen personnalisé ok
