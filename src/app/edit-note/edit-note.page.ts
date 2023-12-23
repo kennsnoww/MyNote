@@ -11,7 +11,7 @@ import { NavController } from '@ionic/angular';
 })
 export class EditNotePage {
   noteId?: string;
-  noteDetails: any; // Remplacez 'any' par le type spécifique de votre modèle de note
+  noteDetails: any;
   modificationReussie: boolean = false;
   modificationReussieMessage: string = 'Enregistrement réussi !';
 
@@ -50,7 +50,6 @@ export class EditNotePage {
      // Mise à jour réussie
      this.modificationReussieMessage = 'La modification enregistrée avec succès.';
      this.modificationReussie = true;
-      // Masquer le message après 3 secondes (3000 millisecondes)
     setTimeout(() => {
       this.modificationReussie = false;
       

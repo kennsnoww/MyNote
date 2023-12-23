@@ -1,11 +1,11 @@
 .home-page {
   background-image: url('/assets/images/back.jpg');
-  background-size: cover; // Ajuste la taille de l'image pour couvrir l'ensemble du conteneur
-  background-position: center; // Centre l'image dans le conteneur
-  background-repeat: no-repeat; // Empêche la répétition de l'image
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 
   ion-content {
-    background: none; // Assurez-vous de réinitialiser le fond du ion-content
+    background: none;
   }
 }
 

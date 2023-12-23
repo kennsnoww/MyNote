@@ -24,7 +24,6 @@
       <ion-input type="number" [(ngModel)]="subject.coefficient"></ion-input>
     </ion-item>
 
-    <!-- Bouton pour supprimer la matière -->
     <ion-icon name="close-circle" (click)="removeSubject(i)" class="delete-icon"></ion-icon>
   </ion-card>
 
@@ -48,9 +47,6 @@
     <ion-label position="floating">Identifiant de l'étudiant</ion-label>
     <ion-input type="text" [(ngModel)]="studentId"></ion-input>
   </ion-item>
-
-
-  <!-- Bouton pour ajouter une nouvelle matière -->
   <ion-button color="success" expand="block" (click)="addSubject()">Ajouter une matière</ion-button>
   <ion-button color="tertiary" expand="block" (click)="addNote()">Ajouter la note </ion-button>
 </ion-content>

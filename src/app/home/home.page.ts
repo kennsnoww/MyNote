@@ -8,10 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage implements OnInit {
   showSpinner = true;
 
-  ngOnInit() {
-    // Simulez une attente de 3 secondes avant de masquer le spinner
-    setTimeout(() => {
-      this.showSpinner = false;
-    }, 3000);
-  }
+  ngOnInit() {}
 }

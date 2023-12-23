@@ -40,7 +40,6 @@ export class AddSubjectPage {
     }
   }
 
-  // Méthode pour effacer les champs après l'ajout
   clearFields() {
     this.subject = { name: '', score: 0, coefficient: 1 };
   }

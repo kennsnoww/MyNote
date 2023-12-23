@@ -12,7 +12,7 @@ export class MenuPage implements OnInit {
 
   showVersion() {
     console.log('Afficher la version');
-    // Ajoutez le code pour afficher la version ici
+    // Ajoutez le code pour afficher la version --kenneth
     
     this.menu.close();
     
@@ -20,7 +20,7 @@ export class MenuPage implements OnInit {
 
   showAbout() {
     console.log('Afficher À propos');
-    // Ajoutez le code pour afficher À propos ici
+    // Ajoutez le code pour afficher À propos --kennneth
     this.menu.close();
   }
 

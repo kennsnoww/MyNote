@@ -1,6 +1,3 @@
-
-
-
 // src/app/pages/add-note/add-note.page.ts
 import { Component } from '@angular/core';
 import { NoteService } from '../services/note.service';
@@ -22,12 +19,10 @@ export class AddNotePage {
   constructor(private noteService: NoteService, private navCtrl: NavController) {}
 
   addSubject() {
-    // Ajoutez une nouvelle matière avec les valeurs par défaut
     this.subjects.push({ name: '', score: 0, coefficient: 1 });
   }
 
   removeSubject(index: number) {
-    // Supprimez une matière en utilisant son index
     this.subjects.splice(index, 1);
   }
 
@@ -43,13 +38,8 @@ export class AddNotePage {
         score: 0,
       };
 
-      // Naviguez vers la page add-subjects avec l'ID de la nouvelle note
       this.navCtrl.navigateForward(`/add-subjects/${newNote.id}`);
-      
-      // Ajoutez la note au service
       this.noteService.addNote(newNote);
-
-      // Retournez à la page de liste des notes après l'ajout
       this.navCtrl.navigateBack('/list-notes');
     }
   }
